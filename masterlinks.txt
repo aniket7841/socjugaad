@@ -1,0 +1,29 @@
+#Encrypting and Decrypting Data Using OpenSSL
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/1.txt
+
+#Demonstrate the use of Snort and Firewall Rules
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/2.txt
+
+#Demonstrate Extract an Executable from a PCAP
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/3.txt
+
+#Demonstrate Analysis of DNS Traffic
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/4.txt
+
+#Create your own syslog Server
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/5.txt
+
+#Configure your Linux system to send syslog messages to a syslog server and Read them
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/6.txt
+
+#Install and Run Splunk on Linux
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/7.txt
+
+#Install and Configure ELK on Linux
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/8.txt
+
+#Install and Configure Graylog on Linux
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/9.txt
+
+#Demonstrate Conversion of Data into a Universal Format 
+https://raw.githubusercontent.com/aniket7841/socjugaad/refs/heads/main/10.txt
