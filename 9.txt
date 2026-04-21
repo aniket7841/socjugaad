@@ -1,3 +1,15 @@
+[Should be Done on UBUNTU]
+# Edit the Elasticsearch configuration file to set the cluster name for Graylog set up.
+sudo nano /etc/elasticsearch/elasticsearch.yml
+
+# Set the cluster name as graylog. Then, uncomment the line and  below add this line
+action.auto_create_index: false
+
+# Start the Elasticsearch service to read the new configurations.
+sudo systemctl daemon-reload
+sudo systemctl start elasticsearch
+sudo systemctl enable elasticsearch
+
 # Update system
 sudo apt update
 
