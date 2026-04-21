@@ -1,3 +1,4 @@
+[SHOULD BE DONE ON UBUNTU MACHINE]
 # Go to temp directory
 cd /tmp
 
