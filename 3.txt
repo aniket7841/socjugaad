@@ -1,3 +1,4 @@
+[SHOULD BE DONE ON CYBEROPS WORKSTATION]
 # Go to PCAP directory
 cd ./lab.support.files/pcaps/
 
@@ -8,7 +9,7 @@ ls -l
 wireshark-gtk nimda.download.pcap
 
 # (Inside Wireshark GUI steps)
-# Follow TCP Stream → Identify file → Export HTTP object → Save .exe
+# right click on TCP which shows top on the list. Then click on Follow TCP  Stream → Follow TCP Stream → Identify file → Export HTTP object → Save .exe
 
 # Verify extracted file
 ls -l
