@@ -1,3 +1,5 @@
+#  IF YOU ARE USING VMWARE USEW THIS COMMAND TO RUN INTERNET: sudo dhcpcd ens33
+
 [SHOULD BE DONE ON CYBEROPS WORKSTATION]
 # Go to lab directory
 cd ./lab.support.files/
