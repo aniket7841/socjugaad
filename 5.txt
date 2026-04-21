@@ -1,4 +1,4 @@
-#Use Ubuntu Machine as rsyslog server
+[Use UBUNTU Machine as rsyslog server]
 # Check rsyslog status
 sudo systemctl status rsyslog
 
@@ -9,7 +9,7 @@ sudo apt-get install rsyslog
 # Open configuration file
 sudo nano /etc/rsyslog.conf
 
-# (Inside file: enable UDP/TCP modules)
+# (Inside file: enable UDP/TCP modules [To Enable just uncomment this lines])
 module(load="imudp")
 input(type="imudp" port="514")
 module(load="imtcp")
