@@ -1,0 +1,17 @@
+# Go to temp directory
+cd /tmp
+
+# Download Splunk package
+wget https://download.splunk.com/products/splunk/releases/7.1.1/linux/splunk-7.1.1-8f0ead9ec3db-linux-2.6-amd64.deb
+
+# Install Splunk
+sudo dpkg -i splunk-7.1.1-8f0ead9ec3db-linux-2.6-amd64.deb
+
+# Start Splunk service (accept license + set admin password when prompted)
+sudo service splunk start
+
+# Check service status
+sudo service splunk status
+
+# Access in browser
+http://localhost:8000

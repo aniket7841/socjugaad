@@ -1,0 +1,34 @@
+# Update system
+sudo apt update
+
+# Install Java
+sudo apt install default-jre
+
+# Verify Java
+java -version
+
+# Add Elasticsearch GPG key
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# Add Elasticsearch repository
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+# Update and install Elasticsearch
+sudo apt update
+sudo apt install elasticsearch
+
+# Edit configuration
+sudo nano /etc/elasticsearch/elasticsearch.yml
+
+# (Inside file: set)
+network.host: localhost
+http.port: 9200
+
+# Start Elasticsearch
+sudo systemctl start elasticsearch
+
+# Enable at boot
+sudo systemctl enable elasticsearch
+
+# Test service
+curl -X GET "localhost:9200"

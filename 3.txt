@@ -1,0 +1,17 @@
+# Go to PCAP directory
+cd ./lab.support.files/pcaps/
+
+# List files
+ls -l
+
+# Open PCAP in Wireshark
+wireshark-gtk nimda.download.pcap
+
+# (Inside Wireshark GUI steps)
+# Follow TCP Stream → Identify file → Export HTTP object → Save .exe
+
+# Verify extracted file
+ls -l
+
+# Check file type
+file W32.Nimda.Amm.exe

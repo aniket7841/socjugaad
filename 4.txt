@@ -1,0 +1,18 @@
+# Flush DNS cache
+ipconfig /flushdns
+
+# Start DNS query
+nslookup
+
+# Inside nslookup
+www.cisco.com
+exit
+
+# (Wireshark filter for DNS traffic)
+udp.port == 53
+
+# View ARP table
+arp -a
+
+# View IP configuration
+ipconfig /all

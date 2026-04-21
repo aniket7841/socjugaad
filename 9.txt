@@ -1,0 +1,41 @@
+# Update system
+sudo apt update
+
+# Install MongoDB
+sudo apt install -y mongodb-server
+
+# Start and enable MongoDB
+sudo systemctl start mongodb
+sudo systemctl enable mongodb
+
+# Install Graylog repository
+wget https://packages.graylog2.org/repo/packages/graylog-4.2-repository_latest.deb
+sudo dpkg -i graylog-4.2-repository_latest.deb
+
+# Update and install Graylog
+sudo apt update
+sudo apt install -y graylog-server
+
+# Generate password secret
+pwgen -N 1 -s 96
+
+# Generate SHA256 password hash
+echo -n password | sha256sum
+
+# Edit Graylog configuration
+sudo nano /etc/graylog/server/server.conf
+
+# (Inside file: set)
+http_bind_address = 192.168.0.10:9000
+http_external_uri = http://<your-ip>:9000/
+
+# Reload and start Graylog
+sudo systemctl daemon-reload
+sudo systemctl start graylog-server
+sudo systemctl enable graylog-server
+
+# Monitor logs
+sudo tail -f /var/log/graylog-server/server.log
+
+# Access in browser
+http://<your-ip>:9000

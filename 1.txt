@@ -1,0 +1,23 @@
+# Go to lab directory
+cd ./lab.support.files/
+
+# View original file
+cat letter_to_grandma.txt
+
+# Encrypt file (AES-256)
+openssl aes-256-cbc -in letter_to_grandma.txt -out message.enc
+
+# View encrypted output
+cat message.enc
+
+# Encrypt with Base64 (readable)
+openssl aes-256-cbc -a -in letter_to_grandma.txt -out message.enc
+
+# View encoded output
+cat message.enc
+
+# Decrypt file
+openssl aes-256-cbc -a -d -in message.enc -out decrypted_letter.txt
+
+# View decrypted file
+cat decrypted_letter.txt

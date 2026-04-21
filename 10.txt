@@ -1,0 +1,23 @@
+# Go to lab directory
+cd /home/analyst/lab.support.files/
+
+# List files
+ls -l
+
+# Convert epoch → human readable (application log)
+awk 'BEGIN {FS=OFS="|"} {$3=strftime("%c",$3)} {print}' applicationX_in_epoch.log
+
+# Save output to new file
+awk 'BEGIN {FS=OFS="|"} {$3=strftime("%c",$3)} {print}' applicationX_in_epoch.log > applicationX_in_human.log
+
+# View converted file
+cat applicationX_in_human.log
+
+# View apache log
+cat apache_in_epoch.log
+
+# Convert apache log (initial attempt)
+awk 'BEGIN {FS=OFS=" "} {$4=strftime("%c",$4)} {print}' apache_in_epoch.log
+
+# Fix brackets issue and convert properly
+awk 'BEGIN {FS=OFS=" "} {gsub(/[|]/,"",$4)} {$4=strftime("%c",$4)} {print}' apache_in_epoch.log

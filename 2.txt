@@ -1,0 +1,57 @@
+# Configure network (DHCP)
+sudo ./lab.support.files/scripts/configure_as_dhcp.sh
+
+# Verify IP
+ifconfig
+
+# Test connectivity
+ping www.cisco.com
+
+# Start Mininet topology
+sudo ./lab.support.files/scripts/cyberops_extended_topo_no_fw.py
+
+# Open terminals inside Mininet
+mininet> xterm R1
+mininet> xterm H5
+mininet> xterm H10
+
+# Start Snort on R1
+./lab.support.files/scripts/start_snort.sh
+
+# Start malware server on H10
+./lab.support.files/scripts/mal_server_start.sh
+
+# Verify running services
+netstat -tunpa
+
+# Monitor Snort alerts (R1)
+tail -f /var/log/snort/alert
+
+# Download malware from H5
+wget 209.165.202.133:6666/W32.Nimda.Amm.exe
+# OR
+curl -O 209.165.202.133:6666/W32.Nimda.Amm.exe
+
+# Capture traffic (H5)
+tcpdump -i H5-eth0 -w nimda.download.pcap &
+
+# Download again while capturing
+curl -O 209.165.202.133:6666/W32.Nimda.Amm.exe
+
+# Bring tcpdump to foreground and stop
+fg
+
+# Verify capture file
+ls -l
+
+# Check firewall rules (R1)
+iptables -L -v
+
+# Block malicious traffic
+iptables -I FORWARD -p tcp -d 209.165.202.133 --dport 6666 -j DROP
+
+# Stop Mininet
+quit
+
+# Cleanup
+sudo mn -c
