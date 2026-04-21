@@ -8,8 +8,8 @@ sudo apt-get install rsyslog
 sudo nano /etc/rsyslog.conf
 
 # (Add server details at end of file [Put the IP of your ubuntu server])
-*.* @192.168.137.50:514
-*.* @@192.168.137.50:514
+*.* @<ubuntu_server_ip>:514
+*.* @@<ubuntu_server_ip>:514
 
 # (Optional: add queue handling)
 $ActionQueueFileName queue
