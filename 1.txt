@@ -1,3 +1,4 @@
+[SHOULD BE DONE ON CYBEROPS WORKSTATION]
 # Go to lab directory
 cd ./lab.support.files/
 
