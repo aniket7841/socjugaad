@@ -1,3 +1,5 @@
+[SHOULD BE DONE IN KALI LINUX FOR CLIENT SETUP AND UBUNTU FOR RSYSLOG SERVER]
+#In this case the client should be on Kali Linux
 # Install rsyslog on client
 sudo apt-get update
 sudo apt-get install rsyslog
@@ -5,7 +7,7 @@ sudo apt-get install rsyslog
 # Open configuration file
 sudo nano /etc/rsyslog.conf
 
-# (Add server details at end of file)
+# (Add server details at end of file [Put the IP of your ubuntu server])
 *.* @192.168.137.50:514
 *.* @@192.168.137.50:514
 
