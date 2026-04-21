@@ -1,3 +1,4 @@
+[SHOULD BE DONE ON CYBEROPS WORKSTATION]
 # Configure network (DHCP)
 sudo ./lab.support.files/scripts/configure_as_dhcp.sh
 
@@ -24,7 +25,7 @@ mininet> xterm H10
 # Verify running services
 netstat -tunpa
 
-# Monitor Snort alerts (R1)
+# Monitor Snort alerts (Open New R1 Terminal)
 tail -f /var/log/snort/alert
 
 # Download malware from H5
@@ -44,7 +45,7 @@ fg
 # Verify capture file
 ls -l
 
-# Check firewall rules (R1)
+# Check firewall rules (Open Third R1 Terminal)
 iptables -L -v
 
 # Block malicious traffic
