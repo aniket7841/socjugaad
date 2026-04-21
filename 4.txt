@@ -1,3 +1,5 @@
+[Should be done on a WINDOWS MACHINE with WIRESHARK Installed]
+#Open Wireshark and start a Wireshark capture by double clicking a network interface with traffic. 
 # Flush DNS cache
 ipconfig /flushdns
 
@@ -16,3 +18,5 @@ arp -a
 
 # View IP configuration
 ipconfig /all
+
+# In Wireshark Expand Domain Name System (response). Then expand the Flags, Queries, and Answers. Observe the results. 
